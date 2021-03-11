@@ -1,0 +1,8 @@
+version: 2
+jobs:
+  build:
+    steps:
+      - checkout
+      - run: pip3 install -r requirements.txt
+      - run: pytest test_calculator.py
+      - run: flake8 --statistics calculator.py test_calculator.py
